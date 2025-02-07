@@ -3,12 +3,11 @@ import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';  
 
 
-export default function Footer({onNext}) {
+export default function Footer({navigation}) {
   return (
         <View style={styles.footer}>
             <TouchableOpacity style={styles.footerButton}
-            onPress={()=>
-            Alert.alert('Next Clicked')}
+            onPress={()=>navigation.navigate('Page1')}
             >
                 <Icon name="arrow-back" size={20} color="white" />
                 <Text style={styles.footerText} >Next</Text>
